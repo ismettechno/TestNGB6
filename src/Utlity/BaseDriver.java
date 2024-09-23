@@ -14,7 +14,7 @@ public class BaseDriver {
 
     @BeforeClass
     public void BaslangicIslemleri(){
-        System.out.println("Başlangıç işlemleri yapılıyor");
+       // System.out.println("Başlangıç işlemleri yapılıyor");
 
         driver=new ChromeDriver();
 
@@ -26,7 +26,7 @@ public class BaseDriver {
 
     @AfterClass
     public void KapanisIslemleri(){
-        System.out.println("Kapanis işlemleri yapılıyor");
+       // System.out.println("Kapanis işlemleri yapılıyor");
 
         Tools.Bekle(3);
         driver.quit();
