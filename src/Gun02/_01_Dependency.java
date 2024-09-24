@@ -19,9 +19,10 @@ public class _01_Dependency {
 
     @Test(dependsOnMethods = {"ParkCar"}, alwaysRun = true)  // hatalı olsada sen çalışmaya devam et
     public void StopCar()  {  System.out.println("StopCar"); }
-
 }
 
+// bağımlı testler, direk metodundan çalıştırdığınızda bağımlı olduğu metod zincirinde
+// 1 üste kadar otomatik çağırıp çalışabilir.
 
 //Dependency (bağımlılık):Bir testin diğer bir testin sonucuna veya
 //belirli bir duruma bağlı olduğu durumları ifade eder.
