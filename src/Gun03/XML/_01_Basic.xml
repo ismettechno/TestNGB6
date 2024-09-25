@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suit">
+    <test name="My Test 1">
+        <classes>
+            <class name="Gun03._02_Intro">
+            </class>
+        </classes>
+    </test>
+</suite>
