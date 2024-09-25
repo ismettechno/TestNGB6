@@ -36,10 +36,10 @@ public class _02_Intro {
 
 
     @Test
-    public void Intro03_Test1(){ System.out.println("_02_Intro Test 1"); }
+    public void Intro02_Test1(){ System.out.println("_02_Intro Test 1"); }
 
     @Test
-    public void Intro03_Test2(){ System.out.println("_02_Intro Test 2"); }
+    public void Intro02_Test2(){ System.out.println("_02_Intro Test 2"); }
 
 
     @AfterMethod
