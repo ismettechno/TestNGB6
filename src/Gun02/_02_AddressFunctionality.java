@@ -5,7 +5,7 @@ package Gun02;
        1- Siteyi açınız.
        2- Adress Ekleyiniz.
        3- En son adresi edit yaparak ad ve soyadı değiştirip kaydediniz.
-       4- En sondan 2. adresi siliniz.
+       4- En sondaki adresi siliniz.
  */
 
 import Utlity.BaseDriver;
@@ -15,6 +15,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class _02_AddressFunctionality extends BaseDriver {
 
@@ -64,13 +66,38 @@ public class _02_AddressFunctionality extends BaseDriver {
         Tools.SuccessMessageValidation();
     }
 
-    @Test
+    @Test(dependsOnMethods = {"AddAddress"})
     void EditAddress() {
+        WebElement addressBook=driver.findElement(By.linkText("Address Book"));
+        addressBook.click();
 
+        List<WebElement> EditAll=driver.findElements(By.linkText("Edit")); //bütün editler
+        WebElement sonEdit=EditAll.get( EditAll.size()-1 ); // en sondaki Edit butonu
+        sonEdit.click();
+
+        WebElement firstName= driver.findElement(By.id("input-firstname"));
+        firstName.clear();
+        firstName.sendKeys("İsmet5");
+
+        WebElement lastname= driver.findElement(By.id("input-lastname"));
+        lastname.clear();
+        lastname.sendKeys("Temur5");
+
+        WebElement continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
+        continueButton.click();
+
+        Tools.SuccessMessageValidation();
     }
 
-    @Test
+    @Test(dependsOnMethods = {"EditAddress"})
     void DeleteAddress() {
+        WebElement addressBook=driver.findElement(By.linkText("Address Book"));
+        addressBook.click();
 
+        List<WebElement> DeleteAll=driver.findElements(By.linkText("Delete")); //bütün Delete ler
+        WebElement sonDelete=DeleteAll.get( DeleteAll.size()-1 ); // en sondaki Delete butonu
+        sonDelete.click();
+
+        Tools.SuccessMessageValidation();
     }
 }
