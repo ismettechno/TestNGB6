@@ -34,11 +34,13 @@ public class _02_Intro {
     @BeforeMethod
     public void BeforeMethod(){ System.out.println("Before Method"); }
 
-    @Test
-    public void Intro03_Test1(){ System.out.println("_03_Intro Test 1"); }
 
     @Test
-    public void Intro03_Test2(){ System.out.println("_03_Intro Test 2"); }
+    public void Intro03_Test1(){ System.out.println("_02_Intro Test 1"); }
+
+    @Test
+    public void Intro03_Test2(){ System.out.println("_02_Intro Test 2"); }
+
 
     @AfterMethod
     public void AfterMethod(){ System.out.println("After Method"); }
