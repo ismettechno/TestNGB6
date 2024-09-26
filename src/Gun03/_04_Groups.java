@@ -3,6 +3,7 @@ package Gun03;
 import org.testng.annotations.Test;
 
 public class _04_Groups {
+    //@Test(groups = { "group1", "group2" })  çoklu group
 
     @Test(groups = {"Smoke Test"})// grup etiketi verdi
     public void Test1() { System.out.println("test1"); }
