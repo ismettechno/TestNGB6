@@ -40,8 +40,6 @@ public class _01_Soru extends BaseDriverParameter {
             System.out.println(newPrice+" "+oldPrice);
             Assert.assertTrue(newPrice < oldPrice, "Yeni Eski fiyattan küçük değil");
         }
-
-
     }
 
 }
