@@ -1,4 +1,4 @@
-package Gun05.XML;
+package Gun05;
 
 import Utlity.BaseDriver;
 import org.openqa.selenium.By;
