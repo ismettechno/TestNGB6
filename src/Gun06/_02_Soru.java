@@ -1,14 +1,11 @@
-package Gun05;
+package Gun06;
 
 /*
-  TODO: Ödev
+  TODO:
   Senaryo;
-  1- Brands menusune gidiniz.
+  1- https://www.ebay.com/n/all-brands  menusune gidiniz.
   2- Burada her bir markanın üstünde yer alan harf ile başladığını doğrulayınız
 */
 
-public class _06_Soru {
-
-
+public class _02_Soru {
 }
-
