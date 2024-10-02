@@ -36,24 +36,25 @@ public class _01_Soru extends BaseDriver {
 
         poe.searchInput.sendKeys("ipod"+ Keys.ENTER);
 
-        int randomSecim= Tools.randomGenerator(sre.productListAddChart.size()); // 0,1,2,3
+        int randomSecim= Tools.randomGenerator(sre.productListAddCart.size()); // 0,1,2,3
         System.out.println(randomSecim);
 
         //tıkaltmadan önce ürürnün ismini saklayalım
         String tiklatilacakUrununAdi=sre.productListCaption.get(randomSecim).getText();
-        sre.productListAddChart.get(randomSecim).click(); // Add chart a tıklandı
+        sre.productListAddCart.get(randomSecim).click(); // Add chart a tıklandı
 
         poe.shoppingChart.click();
 
-        boolean urunBulundu=false;
-        for(WebElement urun : sre.productListBasket)
-        {
-            if (urun.getText().equals(tiklatilacakUrununAdi)) {
-                urunBulundu = true;
-                break;
-            }
-        }
+//        boolean urunBulundu=false;
+//        for(WebElement urun : sre.productListBasket)
+//        {
+//            if (urun.getText().equals(tiklatilacakUrununAdi)) {
+//                urunBulundu = true;
+//                break;
+//            }
+//        }
 
+        boolean urunBulundu=Tools.listContainsString(sre.productListBasket, tiklatilacakUrununAdi); // yukarıdaki döngü metod yapıldı
         Assert.assertTrue(urunBulundu,"Eklediğiniz sepette bulunamadı");
 
 
