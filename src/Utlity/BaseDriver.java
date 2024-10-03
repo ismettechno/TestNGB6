@@ -22,6 +22,7 @@ public class BaseDriver {
 
     @BeforeClass
     public void BaslangicIslemleri(){
+        logEkle.info("Loglama işlemi başladı");
        // System.out.println("Başlangıç işlemleri yapılıyor");
 
         driver=new ChromeDriver();
@@ -44,6 +45,7 @@ public class BaseDriver {
 
         Tools.Bekle(3);
         driver.quit();
+        logEkle.info("Loglama işlemi bitti");
     }
 
     public void Login() {
