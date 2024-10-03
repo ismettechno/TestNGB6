@@ -12,3 +12,16 @@ Log4J (V2) -> Java için loglama -> Log for java -> apache serbest yazılım gel
 
 org.apache.logging.log4j:log4j-api:2.20.0
 org.apache.logging.log4j:log4j-core:2.20.0
+
+
+try{
+  Log.info(işlem başladı)
+
+
+
+  log.info(işlem tamamlandı)
+}
+catch{
+  log.warn(şu kullanıca hata oldu+ex.message)
+
+}

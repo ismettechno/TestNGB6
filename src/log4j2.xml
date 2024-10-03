@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <loggers>  <!--  Aktif etme bölümü-->
+
+        <Root level="INFO"> <!--  # logger options: ALL -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF-->
+            <AppenderRef ref="LogToConsole"/>  <!--  Consola çıktıyı ver     -->
+        </Root>
+
+    </loggers>
+
+
+    <Appenders>   <!-- Çıktı formatı-->
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg\n"/> <!--%d{HH:mm:ss.SSS} : Tarih bilgisi -->
+                                                                          <!--%-5level : MEsaj Sevive bigisi -->
+                                                                           <!--%msg : Bilgi notu -->
+        </Console>
+
+    </Appenders>
+
+</configuration>

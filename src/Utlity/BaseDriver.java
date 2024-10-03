@@ -64,6 +64,7 @@ public class BaseDriver {
         logEkle.debug("Login işlemi testine geçiliyor");
         Assert.assertTrue(driver.getTitle().equals("My Account"), "Login olunamadı");
         logEkle.debug("Login işlemi başarıyla yapıldı");
+        logEkle.warn("Login işlemlerinde testng1@gmail.com kullanıca önemli hata oluştu");
     }
 
     @BeforeMethod
@@ -73,7 +74,7 @@ public class BaseDriver {
     }
 
     @AfterMethod
-    public void AfterMetod(ITestResult sonuc)
+    public void AfterMetod(ITestResult sonuc) // ITestResult: tesin sonuç ve isim bilgisini olduğu değişkeni
     {
         logEkle.info(sonuc.getName()+" Metod çalışması tamalandı");
         logEkle.info(sonuc.getStatus() == 1 ? "Passed" : "failed");  //ternary operatörü
