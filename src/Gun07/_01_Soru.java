@@ -31,6 +31,7 @@ public class _01_Soru extends BaseDriver {
     @Test
     public void addToCart()
     {
+        BaseDriver.logEkle.info("addToCart testi başladı");
         _05_PlaceOrder_Elementleri poe=new _05_PlaceOrder_Elementleri();
         _01_Elements sre= new _01_Elements();
 

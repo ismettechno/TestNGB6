@@ -5,18 +5,21 @@
 
         <Root level="INFO"> <!--  # logger options: ALL -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF-->
             <AppenderRef ref="LogToConsole"/>  <!--  Consola çıktıyı ver     -->
+            <AppenderRef ref="LogToFile"/>     <!--  Dosyaya yazıver     -->
         </Root>
 
     </loggers>
 
-
-    <Appenders>   <!-- Çıktı formatı-->
-        <Console name="LogToConsole" target="SYSTEM_OUT">
+    <Appenders>   <!-- Consol ve Dosya Tanımlama bölümü ve Çıktı formatı-->
+        <Console name="LogToConsole" target="SYSTEM_OUT"> <!-- sysout -->
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg\n"/> <!--%d{HH:mm:ss.SSS} : Tarih bilgisi -->
                                                                           <!--%-5level : MEsaj Sevive bigisi -->
                                                                            <!--%msg : Bilgi notu -->
         </Console>
 
-    </Appenders>
+        <File name="LogToFile" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %msg\n"/>
+        </File>
 
+    </Appenders>
 </configuration>
